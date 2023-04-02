@@ -1,5 +1,5 @@
 // 海绵宝宝数据
-const SpongeBob = {
+const SpongeBobData = {
     imgUrl: "https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304021053783.jpg",
     allAreaInfos: [{
         "name": "痞老板",
@@ -1286,6 +1286,4 @@ const SpongeBob = {
     }, {"x": 89.48295189899754, "y": 206.1934028349882}]],
 }
 
-export default {
-    SpongeBob,
-}
+export default SpongeBobData

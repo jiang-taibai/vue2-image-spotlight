@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Image Spotlight 文档</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+      minimum-scale=1.0">
+<!--     <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+    <!-- <link rel="stylesheet" href="//gcore.jsdelivr.net/npm/docsify/themes/dark.css" /> -->
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    <!-- <link href="_themes/prism/prism-one-light.css" rel="stylesheet" /> -->
+    <style type="text/css">
+      img {
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">正在加载中，请稍等……</div>
+    <script>
+    window.$docsify = {
+      name: 'Image Spotlight 文档',   // 标题
+      repo: 'https://github.com/Jiang-TaiBai/vue2-image-spotlight',
+      loadNavbar: true,           // 自定义导航栏
+      loadSidebar: true,          // 自定义侧边栏
+      subMaxLevel: 3,             // 侧边栏最多显示几级标题
+      auto2top: true,             // url 改变时自动滚动到屏幕上方
+      noEmoji: false,             // 允许使用emoji
+      alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
+        '/.*/_sidebar.md': '/_sidebar.md',//防止意外回退
+        '/.*/_navbar.md': '/_navbar.md'
+      },
+      coverpage: true,            // 自定义封面页
+      plugins: [],
+      markdown: {
+        renderer: {}
+      },
+      // 搜索配置
+      search: {
+          maxAge: 86400000,
+          paths: 'auto',
+          placeholder: '搜索',
+          noData: '找不到结果',
+          depth: 4,
+          hideOtherSidebarContent: false,
+          namespace: 'ImageSpotlight'
+      },
+    }
+  </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- 分页导航 -->
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <!-- 图片放大缩小支持 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.0/plugins/zoom-image.js"></script>
+    <!-- 搜索 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.0/plugins/search.js"></script>
+    <!-- emoji -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.0/plugins/emoji.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  </body>
+</html>

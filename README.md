@@ -15,7 +15,7 @@ ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式*
 详细使用请参考文档：[建设中...]()
 
 <div align="center">
-  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304012002483.gif"/>
+  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020927500.gif"/>
 </div>
 
 ## 编辑器组件
@@ -34,7 +34,7 @@ ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式*
     - 预设参数：可预设已标记的点和区域信息（可用于二次编辑）
 
 <div align="center">
-  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304012127648.gif"/>
+  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020855056.gif"/>
 </div>
 
 ## 渲染器组件
@@ -54,5 +54,10 @@ ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式*
     - 可选的信息展示：可设置不展示信息，交由开发者利用事件监听自定义设计
 
 <div align="center">
-  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304012143554.gif"/>
+  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020841173.gif"/>
 </div>
+
+## License
+项目采用[Apache License 2.0开源协议](https://apache.org/licenses/LICENSE-2.0.txt)
+
+Copyright © 2023 Jiang Liu.

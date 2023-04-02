@@ -1,22 +1,31 @@
 # <div align="center">Image Spotlight for Vue2</div>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Build-passing-%2396C40F"/>
-  <img src="https://img.shields.io/badge/Version-1.0.8-%231081C1"/>
-  <img src="https://img.shields.io/badge/license-Apache-%2396C40F"/>
-  <img src="https://img.shields.io/badge/PoweredBy-JiangTaiBai-%2396C40F"/>
+  <img src="https://img.shields.io/badge/Build-passing-%2396C40F" alt="Build-passing"/>
+  <img src="https://img.shields.io/badge/Version-1.0.8-%231081C1" alt="Version-1.0.8"/>
+  <img src="https://img.shields.io/badge/License-Apache-%2396C40F" alt="License-Apache"/>
+  <img src="https://img.shields.io/badge/PoweredBy-Jiang_Liu-%2396C40F" alt="PoweredBy-Jiang_Liu"/>
 </div>
 
 ## 项目概述
 
-本项目基于Vue，目前兼容Vue2，未来将发布Vue3（其实我是发布了两天Vue3版本，一直出问题😭）
 ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式**，并实现两大必要子组件：编辑器与渲染器
+本项目基于Vue，目前兼容Vue2，未来将发布Vue3（其实我是发布了两天Vue3版本，一直出问题😭）
 
-详细使用请参考文档：[建设中...]()
+详细使用请参考文档：[Image Spotlight 中文文档](https://jiang-taibai.github.io/vue2-image-spotlight/)
 
 <div align="center">
-  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020927500.gif"/>
+  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020927500.gif" alt="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020927500.gif"/>
 </div>
+
+## 相关链接
+
+- 在线体验网站：[Image Spotlight Example]()
+- Image Spotlight 文档：[Image Spotlight 中文文档](https://jiang-taibai.github.io/vue2-image-spotlight/)
+- Image Spotlight for Vue2
+    - [vue2-image-spotlight(Github)](https://github.com/Jiang-TaiBai/vue2-image-spotlight)
+    - [vue2-image-spotlight(Gitee)](https://gitee.com/jiang-taibai/vue2-image-spotlight)
+- Image Spotlight for Vue3：待上传……
 
 ## 编辑器组件
 
@@ -34,7 +43,7 @@ ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式*
     - 预设参数：可预设已标记的点和区域信息（可用于二次编辑）
 
 <div align="center">
-  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020855056.gif"/>
+  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020855056.gif" alt="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020855056.gif"/>
 </div>
 
 ## 渲染器组件
@@ -54,10 +63,11 @@ ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式*
     - 可选的信息展示：可设置不展示信息，交由开发者利用事件监听自定义设计
 
 <div align="center">
-  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020841173.gif"/>
+  <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020841173.gif" alt="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020841173.gif"/>
 </div>
 
 ## License
+
 项目采用[Apache License 2.0开源协议](https://apache.org/licenses/LICENSE-2.0.txt)
 
 Copyright © 2023 Jiang Liu.

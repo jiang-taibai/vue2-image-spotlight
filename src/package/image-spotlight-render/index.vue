@@ -7,7 +7,7 @@
       <div style="font-size: large; font-weight: bolder; margin-bottom: 8px">
         {{ (allAreaInfos.length > 0 && selectingIndex >= 0) ? allAreaInfos[selectingIndex].name : '' }}
       </div>
-      <div style="text-indent: 2em">{{
+      <div>{{
           selectingIndex >= 0 ?
               ((allAreaInfos.length>0 && allAreaInfos[selectingIndex].description.trim().length > 0)
                   ? allAreaInfos[selectingIndex].description : "暂无注释。")
@@ -122,7 +122,6 @@ export default {
         this.offsetY = 0
       }
     },
-
     // 初始化画布
     init() {
       this.initParameter()
@@ -184,15 +183,15 @@ export default {
         that.selfAdaptionImage()
         that.applyParameter()
         // 计算图像的新宽度和高度
-        let newWidth = this.img.width * this.scale;
-        let newHeight = this.img.height * this.scale;
+        let newWidth = that.img.width * this.scale;
+        let newHeight = that.img.height * this.scale;
         that.contextPic.drawImage(that.img,
             that.offsetX, that.offsetY,
             newWidth, newHeight)
         nextTick(() => {
           let descriptionBox = that.$refs["description-box"]
           // 若宽大于高，则将描述信息放到图片的下方
-          descriptionBox.style.top = (this.offsetY + this.img.height * this.scale) + "px"
+          descriptionBox.style.top = (that.offsetY + that.img.height * that.scale) + "px"
           descriptionBox.style.left = "0px"
         })
       }
@@ -330,7 +329,34 @@ export default {
   mounted() {
     this.init()
   },
-  computed: {}
+  computed: {},
+  watch: {
+    imgUrl(newValue, oldValue) {
+      this.selecting = false
+      this.selectingIndex = 0
+      // 加载图像
+      this.img = new Image();
+      this.img.src = newValue;
+      let that = this
+      // 绘制原始图像
+      this.img.onload = function () {
+        that.selfAdaptionImage()
+        that.applyParameter()
+        // 计算图像的新宽度和高度
+        let newWidth = that.img.width * that.scale;
+        let newHeight = that.img.height * that.scale;
+        that.contextPic.drawImage(that.img,
+            that.offsetX, that.offsetY,
+            newWidth, newHeight)
+        nextTick(() => {
+          let descriptionBox = that.$refs["description-box"]
+          // 若宽大于高，则将描述信息放到图片的下方
+          descriptionBox.style.top = (that.offsetY + that.img.height * that.scale) + "px"
+          descriptionBox.style.left = "0px"
+        })
+      };
+    }
+  }
 }
 </script>
 
@@ -356,6 +382,8 @@ export default {
 }
 
 .description-box-down {
+  /* 换行 */
+  white-space: pre-wrap;
   margin-top: 4px;
   background: #EBEBE3;
   border-radius: 8px;

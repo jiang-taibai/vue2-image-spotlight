@@ -74,7 +74,7 @@ new Vue({
 
 ## 渲染器组件的基本使用
 
-使用`<image-spotlight-renderer />`组件，再传入以下基本参数（完整参数解释请看渲染器组件章节）
+使用`<image-spotlight-renderer />`组件，再传入以下基本参数（完整参数解释请看[渲染器组件](/all/introduce-renderer.md)章节）
 
 - imgUrl：必要参数，表示待渲染的图片。
 - allAreaInfos：非必要，表示所有区域的描述性信息，若未提供默认为空数组。
@@ -139,7 +139,7 @@ export default {
 
 ## 编辑器组件的基本使用
 
-使用`<image-spotlight-editor />`组件，再传入以下基本参数（完整参数解释请看编辑器组件章节）
+使用`<image-spotlight-editor />`组件，再传入以下基本参数（完整参数解释请看[编辑器组件](/all/introduce-editor.md)章节）
 
 - imgUrl：必要参数，表示待渲染的图片。
 

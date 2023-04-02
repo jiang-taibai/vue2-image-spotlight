@@ -63,7 +63,7 @@ export default {
 
 > 示例代码——引用JS文件
 
-- `Data-SpongeBob.js`：由于篇幅关系，请详见[附录-示例数据文件]()
+- `Data-SpongeBob.js`：由于篇幅关系，请详见[附录文件](/all/attachment.md)
 - `Configuration-Renderer-Custom.js`：
 
 ```js

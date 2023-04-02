@@ -673,8 +673,26 @@ export default {
       return true
     }
   },
+  beforeMount() {
+
+  },
   mounted() {
     this.init()
+  },
+  watch: {
+    imgUrl(newValue, oldValue) {
+      // 加载图像
+      this.img = new Image();
+      this.img.src = newValue;
+      let that = this
+      // 绘制原始图像
+      this.img.onload = function () {
+        that.initImage()
+        nextTick(() => {
+          that.refreshCanvas()
+        })
+      };
+    }
   }
 }
 </script>
@@ -749,10 +767,10 @@ export default {
                      background: finalConfiguration.areaListItemBackground,
                      width: (finalConfiguration.editingWidth - 16 - 8 - 8 - 8) + 'px',
                    }"
+                   style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;"
                    @mouseover="highlightArea(index)"
                    @mouseleave="recoverArea(index)"
-                   @click="editArea(index)">
-                {{ info.name }}
+                   @click="editArea(index)">{{ info.name }}
               </div>
             </div>
           </div>

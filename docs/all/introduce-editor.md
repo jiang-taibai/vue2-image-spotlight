@@ -114,8 +114,8 @@ export default {
 
 > 示例代码——引用JS文件
 
-- `Data-OsiModel.js`：由于篇幅关系，请详见[附录-示例数据文件]()
-- `Configuration-Editor-Custom.js`：由于篇幅关系，请详见[附录-示例数据文件]()
+- `Data-OsiModel.js`：由于篇幅关系，请详见[附录文件](/all/attachment.md)
+- `Configuration-Editor-Custom.js`：由于篇幅关系，请详见[附录文件](/all/attachment.md)
 
 ### 缩放&移动画布
 
@@ -321,5 +321,4 @@ const buttonNames = {
 ## 编辑器原理
 
 待完善……
-
 

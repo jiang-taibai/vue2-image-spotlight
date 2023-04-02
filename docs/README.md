@@ -4,13 +4,14 @@
 
 ### 项目概述
 
-本项目基于Vue，目前兼容Vue2，未来将发布Vue3（其实我是发布了两天Vue3版本，一直出问题😭）
 ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式**，并实现两大必要子组件：编辑器与渲染器
 
+本项目基于Vue，目前兼容Vue2，未来将发布Vue3（其实我是发布了两天Vue3版本，一直出问题😭）
+
+详细使用请参考文档：[Image Spotlight 中文文档](https://jiang-taibai.github.io/vue2-image-spotlight/)
 <div align="center">
   <img src="https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304020927500.gif"/>
 </div>
-
 
 ### 在线体验
 

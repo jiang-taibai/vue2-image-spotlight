@@ -2,11 +2,11 @@
 
 # **Image Spotlight**
 
-> ✨开启了新式互联网图像浏览模式✨
+> ✨开启新式图像浏览模式✨
 
 <div align="center">
   <img src="https://img.shields.io/badge/Build-passing-%2396C40F"/>
-  <img src="https://img.shields.io/badge/Version-1.0.8-%231081C1"/>
+  <img src="https://img.shields.io/badge/Version-1.0.9-%231081C1"/>
   <img src="https://img.shields.io/badge/license-Apache-%2396C40F"/>
   <img src="https://img.shields.io/badge/PoweredBy-JiangTaiBai-%2396C40F"/>
 </div>

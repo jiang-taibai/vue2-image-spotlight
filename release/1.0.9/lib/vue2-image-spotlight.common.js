@@ -155,8 +155,8 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-render/index.vue?vue&type=template&id=10308cb9&scoped=true&
-var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"canvas-box",attrs:{"id":"main"}},[_c('canvas',{ref:"canvas-pic",attrs:{"id":"canvas-pic","width":"500","height":"400"}}),_c('canvas',{ref:"canvas-masking",attrs:{"id":"canvas-masking","width":"500","height":"400"}}),_c('div',{ref:"description-box",staticClass:"description-box-down"},[_c('div',{staticStyle:{"font-size":"large","font-weight":"bolder","margin-bottom":"8px"}},[_vm._v(" "+_vm._s((_vm.allAreaInfos.length > 0 && _vm.selectingIndex >= 0) ? _vm.allAreaInfos[_vm.selectingIndex].name : '')+" ")]),_c('div',{staticStyle:{"text-indent":"2em"}},[_vm._v(_vm._s(_vm.selectingIndex >= 0 ? ((_vm.allAreaInfos.length>0 && _vm.allAreaInfos[_vm.selectingIndex].description.trim().length > 0) ? _vm.allAreaInfos[_vm.selectingIndex].description : "暂无注释。") : "暂无注释。")+" ")])])])
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-render/index.vue?vue&type=template&id=48c89972&scoped=true&
+var render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{ref:"canvas-box",attrs:{"id":"main"}},[_c('canvas',{ref:"canvas-pic",attrs:{"id":"canvas-pic","width":"500","height":"400"}}),_c('canvas',{ref:"canvas-masking",attrs:{"id":"canvas-masking","width":"500","height":"400"}}),_c('div',{ref:"description-box",staticClass:"description-box-down"},[_c('div',{staticStyle:{"font-size":"large","font-weight":"bolder","margin-bottom":"8px"}},[_vm._v(" "+_vm._s((_vm.allAreaInfos.length > 0 && _vm.selectingIndex >= 0) ? _vm.allAreaInfos[_vm.selectingIndex].name : '')+" ")]),_c('div',[_vm._v(_vm._s(_vm.selectingIndex >= 0 ? ((_vm.allAreaInfos.length>0 && _vm.allAreaInfos[_vm.selectingIndex].description.trim().length > 0) ? _vm.allAreaInfos[_vm.selectingIndex].description : "暂无注释。") : "暂无注释。")+" ")])])])
 }
 var staticRenderFns = []
 
@@ -365,7 +365,6 @@ const DefaultConfiguration = {
         this.offsetY = 0
       }
     },
-
     // 初始化画布
     init() {
       this.initParameter()
@@ -427,15 +426,15 @@ const DefaultConfiguration = {
         that.selfAdaptionImage()
         that.applyParameter()
         // 计算图像的新宽度和高度
-        let newWidth = this.img.width * this.scale;
-        let newHeight = this.img.height * this.scale;
+        let newWidth = that.img.width * this.scale;
+        let newHeight = that.img.height * this.scale;
         that.contextPic.drawImage(that.img,
             that.offsetX, that.offsetY,
             newWidth, newHeight)
         ;(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.nextTick)(() => {
           let descriptionBox = that.$refs["description-box"]
           // 若宽大于高，则将描述信息放到图片的下方
-          descriptionBox.style.top = (this.offsetY + this.img.height * this.scale) + "px"
+          descriptionBox.style.top = (that.offsetY + that.img.height * that.scale) + "px"
           descriptionBox.style.left = "0px"
         })
       }
@@ -573,15 +572,42 @@ const DefaultConfiguration = {
   mounted() {
     this.init()
   },
-  computed: {}
+  computed: {},
+  watch: {
+    imgUrl(newValue, oldValue) {
+      this.selecting = false
+      this.selectingIndex = 0
+      // 加载图像
+      this.img = new Image();
+      this.img.src = newValue;
+      let that = this
+      // 绘制原始图像
+      this.img.onload = function () {
+        that.selfAdaptionImage()
+        that.applyParameter()
+        // 计算图像的新宽度和高度
+        let newWidth = that.img.width * that.scale;
+        let newHeight = that.img.height * that.scale;
+        that.contextPic.drawImage(that.img,
+            that.offsetX, that.offsetY,
+            newWidth, newHeight)
+        ;(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.nextTick)(() => {
+          let descriptionBox = that.$refs["description-box"]
+          // 若宽大于高，则将描述信息放到图片的下方
+          descriptionBox.style.top = (that.offsetY + that.img.height * that.scale) + "px"
+          descriptionBox.style.left = "0px"
+        })
+      };
+    }
+  }
 });
 
 ;// CONCATENATED MODULE: ./src/package/image-spotlight-render/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var package_image_spotlight_rendervue_type_script_lang_js_ = (image_spotlight_rendervue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-render/index.vue?vue&type=style&index=0&id=10308cb9&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-render/index.vue?vue&type=style&index=0&id=48c89972&prod&scoped=true&lang=css&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/package/image-spotlight-render/index.vue?vue&type=style&index=0&id=10308cb9&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./src/package/image-spotlight-render/index.vue?vue&type=style&index=0&id=48c89972&prod&scoped=true&lang=css&
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -696,30 +722,30 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "10308cb9",
+  "48c89972",
   null
   
 )
 
 /* harmony default export */ var image_spotlight_render = (component.exports);
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-editor/index.vue?vue&type=template&id=adf372f8&scoped=true&
-var image_spotlight_editorvue_type_template_id_adf372f8_scoped_true_render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"main"},[_c('div',{ref:"drawing-area",staticClass:"drawing-area"},[_c('canvas',{ref:"canvas",attrs:{"id":"canvas","height":"400","width":"500"}})]),_c('div',{ref:"editing-area",staticStyle:{"height":"400px","width":"200px","margin-left":"8px","background":"#e8e8e8"}},[_c('div',{staticStyle:{"padding":"8px"}},[(!_vm.drawing && !_vm.editing)?_c('div',[_c('image-spotlight-button',{attrs:{"type":"success"},nativeOn:{"click":function($event){return _vm.accomplish.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.accomplish)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.newArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.newArea)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.recoverImagePosition.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.resetPosition)+" ")])],1):(_vm.drawing)?_c('div',[_c('image-spotlight-button',{attrs:{"type":"success"},nativeOn:{"click":function($event){return _vm.addArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.addArea)+" ")]),_c('image-spotlight-button',{attrs:{"type":"warning"},nativeOn:{"click":function($event){return _vm.rollBackAreaLatestPoint.apply(null, arguments)}}},[_vm._v(" "+_vm._s(_vm.finalConfiguration.buttonNames.rollBack)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.cancelArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.cancelArea)+" ")])],1):(_vm.editing)?_c('div',[_c('image-spotlight-button',{attrs:{"type":"success"},nativeOn:{"click":function($event){return _vm.confirmChange.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.confirmChange)+" ")]),_c('image-spotlight-button',{attrs:{"type":"warning"},nativeOn:{"click":function($event){return _vm.deleteArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.deleteArea)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.cancelChange.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.cancelChange)+" ")])],1):_vm._e()]),_c('div',{staticStyle:{"margin":"0 8px 8px 8px","background":"white","border-radius":"8px"}},[(!_vm.drawing && !_vm.editing)?_c('div',[_c('div',{ref:"outline-list",staticClass:"outlines-list",style:({
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-editor/index.vue?vue&type=template&id=72dda0ce&scoped=true&
+var image_spotlight_editorvue_type_template_id_72dda0ce_scoped_true_render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{staticClass:"main"},[_c('div',{ref:"drawing-area",staticClass:"drawing-area"},[_c('canvas',{ref:"canvas",attrs:{"id":"canvas","height":"400","width":"500"}})]),_c('div',{ref:"editing-area",staticStyle:{"height":"400px","width":"200px","margin-left":"8px","background":"#e8e8e8"}},[_c('div',{staticStyle:{"padding":"8px"}},[(!_vm.drawing && !_vm.editing)?_c('div',[_c('image-spotlight-button',{attrs:{"type":"success"},nativeOn:{"click":function($event){return _vm.accomplish.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.accomplish)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.newArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.newArea)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.recoverImagePosition.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.resetPosition)+" ")])],1):(_vm.drawing)?_c('div',[_c('image-spotlight-button',{attrs:{"type":"success"},nativeOn:{"click":function($event){return _vm.addArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.addArea)+" ")]),_c('image-spotlight-button',{attrs:{"type":"warning"},nativeOn:{"click":function($event){return _vm.rollBackAreaLatestPoint.apply(null, arguments)}}},[_vm._v(" "+_vm._s(_vm.finalConfiguration.buttonNames.rollBack)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.cancelArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.cancelArea)+" ")])],1):(_vm.editing)?_c('div',[_c('image-spotlight-button',{attrs:{"type":"success"},nativeOn:{"click":function($event){return _vm.confirmChange.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.confirmChange)+" ")]),_c('image-spotlight-button',{attrs:{"type":"warning"},nativeOn:{"click":function($event){return _vm.deleteArea.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.deleteArea)+" ")]),_c('image-spotlight-button',{nativeOn:{"click":function($event){return _vm.cancelChange.apply(null, arguments)}}},[_vm._v(_vm._s(_vm.finalConfiguration.buttonNames.cancelChange)+" ")])],1):_vm._e()]),_c('div',{staticStyle:{"margin":"0 8px 8px 8px","background":"white","border-radius":"8px"}},[(!_vm.drawing && !_vm.editing)?_c('div',[_c('div',{ref:"outline-list",staticClass:"outlines-list",style:({
                 background: _vm.finalConfiguration.areaListBackground,
                 width: (_vm.finalConfiguration.editingWidth - 16 - 8 - 4) +'px',
                 height: (_vm.finalConfiguration.height - 56 - 8) + 'px'
               })},[_c('div',{ref:"scroll",staticClass:"scroll",style:({
                    width: (_vm.finalConfiguration.editingWidth - 16 - 8 - 4) + 'px',
                    height: (_vm.finalConfiguration.height - 56 - 8 - 4) + 'px',
-               })},_vm._l((_vm.allAreaInfos),function(info,index){return _c('div',{ref:'areaListItem-' + index,refInFor:true,staticClass:"outlines-item",style:({
+               })},_vm._l((_vm.allAreaInfos),function(info,index){return _c('div',{ref:'areaListItem-' + index,refInFor:true,staticClass:"outlines-item",staticStyle:{"overflow":"hidden","white-space":"nowrap","text-overflow":"ellipsis"},style:({
                    background: _vm.finalConfiguration.areaListItemBackground,
                    width: (_vm.finalConfiguration.editingWidth - 16 - 8 - 8 - 8) + 'px',
-                 }),on:{"mouseover":function($event){return _vm.highlightArea(index)},"mouseleave":function($event){return _vm.recoverArea(index)},"click":function($event){return _vm.editArea(index)}}},[_vm._v(" "+_vm._s(info.name)+" ")])}),0)])]):(_vm.drawing || _vm.editing)?_c('div',{style:({
+                 }),on:{"mouseover":function($event){return _vm.highlightArea(index)},"mouseleave":function($event){return _vm.recoverArea(index)},"click":function($event){return _vm.editArea(index)}}},[_vm._v(_vm._s(info.name)+" ")])}),0)])]):(_vm.drawing || _vm.editing)?_c('div',{style:({
                    padding:'8px',
                    width: (_vm.finalConfiguration.editingWidth - 16 - 8 - 4) + 'px',
                    height: (_vm.finalConfiguration.height - 56 - 8 - 4) + 'px',
                  })},[_c('div',{staticStyle:{"text-align":"center","font-weight":"bolder","padding-bottom":"8px"}},[_vm._v("选区信息")]),_c('div',{staticStyle:{"margin-bottom":"8px"}},[(_vm.finalConfiguration.rule.name.required)?_c('span',{staticStyle:{"color":"red"}},[_vm._v("*")]):_vm._e(),_vm._v(" 选区名称 "),(_vm.areaInfoError.name)?_c('span',{staticStyle:{"color":"red","font-size":"small"}},[_vm._v(_vm._s(_vm.finalConfiguration.rule.name.info))]):_vm._e()]),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.areaInfo.name),expression:"areaInfo.name"}],staticClass:"base-input input",style:({marginBottom: '8px',width: (_vm.finalConfiguration.editingWidth - 16 - 8 - 8 - 10) + 'px'}),attrs:{"placeholder":"请输入选区名称"},domProps:{"value":(_vm.areaInfo.name)},on:{"input":function($event){if($event.target.composing)return;_vm.$set(_vm.areaInfo, "name", $event.target.value)}}}),_c('div',{staticStyle:{"margin-bottom":"8px"}},[(_vm.finalConfiguration.rule.description.required)?_c('span',{staticStyle:{"color":"red"}},[_vm._v("*")]):_vm._e(),_vm._v(" 选区描述 "),(_vm.areaInfoError.description)?_c('span',{staticStyle:{"color":"red","font-size":"small"}},[_vm._v(_vm._s(_vm.finalConfiguration.rule.description.info))]):_vm._e()]),_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.areaInfo.description),expression:"areaInfo.description"}],staticClass:"base-input textarea",style:({width: (_vm.finalConfiguration.editingWidth - 16 - 8 - 8 - 10) + 'px'}),attrs:{"rows":Math.floor((_vm.finalConfiguration.height - 56 - 8 - 4 - 108.8 - 8) / 20.8 - 1),"placeholder":"请输入选区描述"},domProps:{"value":(_vm.areaInfo.description)},on:{"input":function($event){if($event.target.composing)return;_vm.$set(_vm.areaInfo, "description", $event.target.value)}}})]):_vm._e()])])])
 }
-var image_spotlight_editorvue_type_template_id_adf372f8_scoped_true_staticRenderFns = []
+var image_spotlight_editorvue_type_template_id_72dda0ce_scoped_true_staticRenderFns = []
 
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/subcomponent/image-spotlight-button.vue?vue&type=template&id=09df7450&scoped=true&
@@ -1565,17 +1591,35 @@ const editorConfiguration_DefaultConfiguration = {
       return true
     }
   },
+  beforeMount() {
+
+  },
   mounted() {
     this.init()
+  },
+  watch: {
+    imgUrl(newValue, oldValue) {
+      // 加载图像
+      this.img = new Image();
+      this.img.src = newValue;
+      let that = this
+      // 绘制原始图像
+      this.img.onload = function () {
+        that.initImage()
+        ;(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.nextTick)(() => {
+          that.refreshCanvas()
+        })
+      };
+    }
   }
 });
 
 ;// CONCATENATED MODULE: ./src/package/image-spotlight-editor/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var package_image_spotlight_editorvue_type_script_lang_js_ = (image_spotlight_editorvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-editor/index.vue?vue&type=style&index=0&id=adf372f8&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/image-spotlight-editor/index.vue?vue&type=style&index=0&id=72dda0ce&prod&scoped=true&lang=css&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/package/image-spotlight-editor/index.vue?vue&type=style&index=0&id=adf372f8&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./src/package/image-spotlight-editor/index.vue?vue&type=style&index=0&id=72dda0ce&prod&scoped=true&lang=css&
 
 ;// CONCATENATED MODULE: ./src/package/image-spotlight-editor/index.vue
 
@@ -1588,11 +1632,11 @@ const editorConfiguration_DefaultConfiguration = {
 
 var image_spotlight_editor_component = normalizeComponent(
   package_image_spotlight_editorvue_type_script_lang_js_,
-  image_spotlight_editorvue_type_template_id_adf372f8_scoped_true_render,
-  image_spotlight_editorvue_type_template_id_adf372f8_scoped_true_staticRenderFns,
+  image_spotlight_editorvue_type_template_id_72dda0ce_scoped_true_render,
+  image_spotlight_editorvue_type_template_id_72dda0ce_scoped_true_staticRenderFns,
   false,
   null,
-  "adf372f8",
+  "72dda0ce",
   null
   
 )

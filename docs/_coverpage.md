@@ -1,14 +1,12 @@
-
-
 # **Image Spotlight**
 
 > ✨开启新式图像浏览模式✨
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Build-passing-%2396C40F"/>
-  <img src="https://img.shields.io/badge/Version-1.0.9-%231081C1"/>
-  <img src="https://img.shields.io/badge/license-Apache-%2396C40F"/>
-  <img src="https://img.shields.io/badge/PoweredBy-JiangTaiBai-%2396C40F"/>
+<div style="text-align: center">
+  <img src="https://img.shields.io/badge/Build-passing-%2396C40F" alt="Build-passing"/>
+  <img src="https://img.shields.io/badge/Version-1.0.9-%231081C1" alt="Version-1.0.9"/>
+  <img src="https://img.shields.io/badge/license-Apache-%2396C40F" alt="license-Apache"/>
+  <img src="https://img.shields.io/badge/PoweredBy-Jiang_Liu-%2396C40F" alt="PoweredBy-Jiang_Liu"/>
 </div>
 
 ImageSpotlight（图像聚光灯）实现了新式互联网图像浏览模式，并实现两大必要子组件：编辑器与渲染器

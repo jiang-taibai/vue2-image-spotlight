@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Build-passing-%2396C40F" alt="Build-passing"/>
-  <img src="https://img.shields.io/badge/Version-1.0.9-%231081C1" alt="Version-1.0.8"/>
+  <img src="https://img.shields.io/badge/Version-1.0.9-%231081C1" alt="Version-1.0.9"/>
   <img src="https://img.shields.io/badge/License-Apache-%2396C40F" alt="License-Apache"/>
   <img src="https://img.shields.io/badge/PoweredBy-Jiang_Liu-%2396C40F" alt="PoweredBy-Jiang_Liu"/>
 </div>

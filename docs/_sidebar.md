@@ -1,4 +1,4 @@
-- [Image Spotlight 中文文档](/README.md)
+- [Image Spotlight 概述](/README.md)
 - [快速上手](/all/quick-start-guide.md)
 - [渲染器组件](/all/introduce-renderer.md)
 - [编辑器组件](/all/introduce-editor.md)

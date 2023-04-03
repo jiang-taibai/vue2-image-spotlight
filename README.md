@@ -9,7 +9,10 @@
 
 ## 项目概述
 
-ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式**，并实现两大必要子组件：编辑器与渲染器
+ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式**，并实现两大必要子组件：编辑器与渲染器。
+
+通过Image Spotlight，你可以在多目标图、流程图以及各种复杂结构图像之上搭建聚光灯舞台，大大提高用户浏览图片的体验。
+
 本项目基于Vue，目前兼容Vue2，未来将发布Vue3（其实我是发布了两天Vue3版本，一直出问题😭）
 
 详细使用请参考文档：[Image Spotlight 中文文档](https://jiang-taibai.github.io/vue2-image-spotlight/)
@@ -20,11 +23,16 @@ ImageSpotlight（图像聚光灯）实现了**新式互联网图像浏览模式*
 
 ## 相关链接
 
-- 在线体验网站：[Image Spotlight Example]()
-- Image Spotlight 文档：[Image Spotlight 中文文档](https://jiang-taibai.github.io/vue2-image-spotlight/)
+- 在线体验网站：
+  - [Image Spotlight Example 在线体验⚡](https://jiang-taibai.github.io/vue2-image-spotlight-example/)
+  - [Image Spotlight Example (GitHub)](https://github.com/Jiang-TaiBai/vue2-image-spotlight-example)
+  - [Image Spotlight Example (Gitee)](https://gitee.com/jiang-taibai/vue2-image-spotlight-example)
+- Image Spotlight 文档：
+  - [Image Spotlight 中文文档](https://jiang-taibai.github.io/vue2-image-spotlight/)
+  - [Image Spotlight English Document(Sorry, it's under construction)]()
 - Image Spotlight for Vue2
-    - [vue2-image-spotlight(Github)](https://github.com/Jiang-TaiBai/vue2-image-spotlight)
-    - [vue2-image-spotlight(Gitee)](https://gitee.com/jiang-taibai/vue2-image-spotlight)
+  - [vue2-image-spotlight (GitHub)](https://github.com/Jiang-TaiBai/vue2-image-spotlight)
+  - [vue2-image-spotlight (Gitee)](https://gitee.com/jiang-taibai/vue2-image-spotlight)
 - Image Spotlight for Vue3：待上传……
 
 ## 编辑器组件

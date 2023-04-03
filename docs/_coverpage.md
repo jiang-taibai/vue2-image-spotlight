@@ -15,4 +15,10 @@ ImageSpotlight（图像聚光灯）实现了新式互联网图像浏览模式，
 
 本项目基于Vue，目前兼容Vue2，未来将发布Vue3。
 
-[📜帮助文档](README.md)[⚡在线体验](/)[🍬更新日志](/)[I.S. For Vue2](https://github.com/Jiang-TaiBai/vue2-image-spotlight)[I.S. For Vue3]()
+[📜中文文档](/README.md)
+[⚡在线体验](https://jiang-taibai.github.io/vue2-image-spotlight-example/)
+[🍬更新日志](/all/update-log.md)
+[I.S. for Vue2(GitHub)](https://github.com/Jiang-TaiBai/vue2-image-spotlight)
+[I.S. for Vue3(GitHub)]()
+[I.S. for Vue2(Gitee)](https://gitee.com/jiang-taibai/vue2-image-spotlight-example)
+[I.S. for Vue3(Gitee)]()

@@ -3,3 +3,4 @@
 - [渲染器组件](/all/introduce-renderer.md)
 - [编辑器组件](/all/introduce-editor.md)
 - [附录文件](/all/attachment.md)
+- [更新日志](/all/update-log.md)

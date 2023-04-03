@@ -37,7 +37,7 @@ const DefaultConfiguration = {
         },
     },
     // 背景填充图片，最好是平铺图
-    backgroundImage: 'https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304021123069.png',
+    backgroundImage: 'url(https://gcore.jsdelivr.net/gh/Jiang-TaiBai/pic-go@main/img/202304021123069.png)',
     // 右侧编辑区背景色
     editingAreaBackground: "#E8E8E8",
     // 选区列表背景颜色
